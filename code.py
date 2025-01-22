@@ -2,14 +2,14 @@ from xml.dom.minidom import Notation
 import cv2
 import face_recognition
 
-img = cv2.imread(r"C:\Users\ThinkPad\Desktop\object\image\test.jpg")
+img = cv2.imread(r"path_img*")
 img = cv2.resize(img,(400,300))
 rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 passcodeX = face_recognition.face_encodings(rgb_img)[0]
 
 location = face_recognition.face_locations(rgb_img)
 
-img2 = cv2.imread(r'C:\Users\ThinkPad\Desktop\object\image\wife.jpg')
+img2 = cv2.imread(r'path_img*')
 rgb_img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
 passcodeY = face_recognition.face_encodings(rgb_img2)[0]
 
